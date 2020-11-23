@@ -1,0 +1,16 @@
+<div fxLayout="column">
+  <div class="headOfTable" *ngIf="responsiveBoolien">
+    <div fxFlex="14">שיעור</div>
+    <div fxFlex="41">הערות לכיתה</div>
+    <div fxFlex="33">הערות שלי</div>
+  </div>
+  <div
+    class="list__cards"
+    *ngFor="let classGroup of noteService.iNote | async; let i = index"
+  >
+    <app-card      
+      [responsiveBoolien]="responsiveBoolien"
+      [classGroup]="classGroup"
+    ></app-card>
+  </div>
+</div>

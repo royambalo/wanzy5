@@ -1,0 +1,71 @@
+<div fxHide.gt-md>
+  <div class="header__headline">סיכומי שיעור</div>
+</div>
+<div
+  fxLayout.lt-lg="row wrap"
+  fxLayout.gt-md="row"
+  fxLayoutAlign.lt-lg="space-between"
+  fxLayoutGap.gt-md="30px"
+  class="header__nav"
+>
+  <mat-form-field
+    fxFlexOrder.lt-lg="3"
+    appearance="none"
+    fxFlex.gt-md="15"
+    fxFlex.lt-lg="40"
+  >
+    <mat-select (selectionChange)="filter($event)">
+      <mat-option value="-1">כל המקצועות</mat-option>
+      <mat-option value="0">מתמטיקה</mat-option>
+      <mat-option value="1">היסטוריה</mat-option>
+      <mat-option value="1">לשון והבנת הנקרא</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field
+    fxFlexOrder.lt-lg="2"
+    appearance="none"
+    fxFlex.gt-md="10"
+    fxFlex.lt-lg="40"
+  >
+    <mat-select panelClass="selectCustum">
+      <mat-option value="all">כל הכיתות</mat-option>
+      <!-- <mat-option *ngFor="let item of classGrade" value={{item}}>{{item}}</mat-option> -->
+      <mat-option value="{{ classGrade.class_1 }}">{{
+        classGrade.class_1
+      }}</mat-option>
+      <mat-option value="{{ classGrade.class_2 }}">{{
+        classGrade.class_2
+      }}</mat-option>
+      <mat-option value="{{ classGrade.class_3 }}">{{
+        classGrade.class_3
+      }}</mat-option>
+    </mat-select>
+  </mat-form-field>
+
+  <mat-form-field
+    fxFlexOrder.lt-lg="1"
+    appearance="none"
+    fxFlex.gt-md="20"
+    fxFlex.lt-lg="100"
+  >
+    <div fxLayout="row-reverse" fxLayoutAlign="center center">
+      <mat-date-range-input [rangePicker]="picker">
+        <input
+          readonly
+          matStartDate
+          (dateChange)="startevent($event)"
+          placeholder="התחלה"
+        />
+        <input
+          readonly
+          (dateChange)="endevent($event)"
+          matEndDate
+          placeholder="סוף"
+        />
+      </mat-date-range-input>
+      <mat-datepicker-toggle matPrefix [for]="picker"></mat-datepicker-toggle>
+      <mat-date-range-picker #picker></mat-date-range-picker>
+    </div>
+  </mat-form-field>
+</div>
