@@ -8,9 +8,7 @@
     class="list__cards"
     *ngFor="let classGroup of noteService.iNote | async; let i = index"
   >
-    <app-card      
-      [responsiveBoolien]="responsiveBoolien"
-      [classGroup]="classGroup"
-    ></app-card>
-  </div>
+  <app-card-desktop *ngIf="responsiveBoolien" [classGroup]="classGroup"></app-card-desktop>
+  <app-card-mobile  *ngIf="!responsiveBoolien" [classGroup]="classGroup"></app-card-mobile>  
+</div>
 </div>

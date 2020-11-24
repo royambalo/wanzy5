@@ -1,0 +1,99 @@
+<div>
+  <mat-expansion-panel  
+    class="deactivateStyleMatriel"
+    hideToggle
+    (opened)="panelOpenState = true"
+    (closed)="panelOpenState = false"
+  >
+  <mat-expansion-panel-header >
+   
+  </mat-expansion-panel-header>
+    <!-- <mat-expansion-panel-header class="card" fxLayoutAlign="none start" >
+      <mat-panel-title (click)="$event.stopPropagation()" fxFlex="15">
+        <div   class="__title-desktop">
+          <div fxLayout="row" fxLayoutAlign="center center">
+            <div fxLayoutAlign="center center" class="__icon__rupper-desktop">
+              <mat-icon fxLayoutAlign="center center">alarm</mat-icon>
+            </div>
+            <div>
+              <div class="__name">{{ classGroup.name }}</div>
+              <div class="__date-desktop">
+                {{ classGroup.date | date: "shortDate" }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </mat-panel-title>
+      <mat-panel-description  fxFlex="100">
+        <div (click)="$event.stopPropagation()" fxFlex *ngFor="let item of classGroup.NoteInsideClass">
+          <div class="__content__desktop" fxLayout="row">
+            <div
+              fxLayout
+              fxFlexAlign="start"
+              class="img_rupper img_rupper__desktop"
+            >
+              <img class="__img__desktop __img" src="{{ item.img }}" alt="" />
+              <div
+                *ngIf="item.attachments.length"
+                class="__iconsmall __iconsmall__desktop"
+                fxLayoutAlign="center center"
+              >
+                <mat-icon fxLayoutAlign="center center">attach_file</mat-icon>
+              </div>
+            </div>
+            <div 
+              *ngIf="!panelOpenState"
+              fxFlex="100"
+              class="descriprion__text__rupper-desktop"
+            >
+              <div fxFlex="1 1 70" class="previewText previewText__desktop">
+                {{ item.text}}
+              </div>
+            </div>
+
+            <div
+              *ngIf="panelOpenState"
+              class="expanded__desktop"
+              fxFlex="70"
+              fxLayout="column"
+            >
+              <div fxFlex>
+                <div class="text__expended">
+                  {{ item.text }}
+                  {{ item.text }}
+                  {{ item.text }}
+                </div>
+              </div>
+              <div
+                class="buttun__container"
+                fxFlexOffset="17px"
+                fxLayoutGap="8px"
+                fxLayout="row wrap"
+                fxLayoutAlign="start start"
+                *ngIf="item.attachments.length > 0"
+              >
+                <div *ngFor="let file of item.attachments">
+                  <button
+                    (click)="$event.stopPropagation()"
+                    (click)="onFiles(file)"
+                    matRipple
+                    class="button button-desktop"
+                    fxLayout="row"
+                    fxLayoutAlign="center center"
+                  >
+                    <mat-icon class="icon__file">insert_drive_file</mat-icon>
+                    <div>{{ file.name }}</div>
+                    <div>{{ file.suffix }}</div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="position_arrow">
+          <mat-icon class="iconArrow">keyboard_arrow_down</mat-icon>
+        </div>
+      </mat-panel-description>
+    </mat-expansion-panel-header> -->
+  </mat-expansion-panel>
+</div>

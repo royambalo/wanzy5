@@ -45,4 +45,27 @@ app-header {
     padding-top: 10px;
     padding-right: 17px;
   }
+  .mat-date-range-input-start-wrapper{
+    // position: static;
+    // background-color: black;
+  }
+  .mat-date-range-input-inner{
+    position: static;
+    // background-color: aqua;
+  }
+  .mat-date-range-input-inner{
+    width: 50%;
+  }
+  .mat-date-range-input-start-wrapper .mat-date-range-input-inner{
+    position: static;
+  }
+
 }
+    .mat-select-panel:not([class*=mat-elevation-z]){
+      border-radius: 20px;
+        
+    }
+    mat-option:hover{
+      background-color: blue !important;
+      color: white;
+    }

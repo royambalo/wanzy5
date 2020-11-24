@@ -1,0 +1,205 @@
+.deactivateStyleMatriel {
+    box-shadow: none;
+  }
+  
+  .card {
+    background-color: var(--div-bgColor);
+    min-height: 130px;
+    border-radius: 10px;
+    .__content__desktop {
+      margin-top: 16px;
+    }
+    &__mobile {
+      min-height: 192px;
+    }
+    .__title-desktop {
+      margin-top: 16px;
+      margin-right: 18px;
+    }
+    .__icon__rupper-desktop {
+      width: 40px;
+      height: 40px;
+      margin-left: 8px;
+      border-radius: 50px;
+      background-color: var(--icon-bgColor);
+      mat-icon {
+        padding: 10px;
+        font-size: 30px;
+      }
+    }
+    .__name {
+      font: normal normal bold 18px/27px Heebo;
+    }
+    .__date-desktop {
+      font: normal normal medium 14px/21px Heebo;
+    }
+    .__header-mobile {
+      border-radius: 10px;
+      min-height: 50px;
+      .__content {
+        margin-right: 16px;
+        margin-top: 8px;
+        margin-left: 18px;
+        margin-bottom: 10px;
+        .__date-mobile {
+          font: normal normal normal 16px/24px Heebo;
+        }
+      }
+      .__icon__rupper {
+        border-radius: 50px;
+        width: 20px;
+        height: 20px;
+        margin-left: 8px;
+        margin-top: 3px;
+        background-color: var(--icon-bgColor);
+        mat-icon {
+          font-size: 10px;
+        }
+      }
+    }
+    .img {
+      padding: 10px;
+    }
+    .img_rupper {
+      position: relative;
+      margin-left: 20px;
+      .__img {
+        display: block;
+        border-radius: 50px;
+        &__desktop {
+          width: 40px;
+          height: 40px;
+        }
+        &__mobile {
+          width: 40px;
+          height: 40px;
+        }
+      }
+      .__iconsmall {
+        position: absolute;
+        background: var(--icon_inside_icon-bgColor);
+        border: 2px solid var(--div-bgColor);
+        border-radius: 50%;
+        transform: matrix(0.73, 0.68, -0.68, 0.73, 0, 0);
+        &__desktop {
+          top: 25px;
+          left: 22px;
+          width: 30px;
+          height: 30px;
+        }
+        &__mobile {
+          width: 24px;
+          height: 24px;
+          bottom: 6px;
+          right: 6px;
+        }
+        .mat-icon {
+          font-size: 17px;
+        }
+      }
+    }
+    .card_inside-mobile {
+      height: fit-content;
+      margin-left: 24px;
+      margin-right: 16px;
+  
+      .__content {
+        padding-bottom: 10px;
+        border-bottom: 1px solid var(--border__content--mobile);
+      }
+      .__header__Note {
+        font: normal normal bold 18px/27px Heebo;
+        letter-spacing: 0px;
+        color: var(--header__text-color);
+        margin-bottom: 2px;
+      }
+    }
+  }
+  
+  .position_arrow {
+    margin-left: 20px;
+    margin-top: 50px;
+  }
+  
+  .descriprion__text__rupper-desktop {
+    height: 130px;
+  }
+  .mat-expanded {
+    mat-panel-description {
+      font: normal normal normal 14px/18px Heebo;
+      color: #454953;
+    }
+    .iconArrow {
+      transform: rotate(180deg);
+      margin-top: 20px;
+    }
+    .text__expended {
+      max-height: 293px;
+      overflow: auto;
+  
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--content-desktop__border__color);
+      font: normal normal normal 14px/18px Heebo;
+      color: #454953;
+    }
+    mat-expansion-panel-header {
+      height: fit-content;
+    }
+    .panel-title__mobile {
+      border-bottom: none;
+    }
+  }
+  
+  .previewText {
+    color: #454953;
+    &__desktop {
+      font: normal normal normal 14px/18px Heebo;
+      max-height: 4em;
+      overflow: hidden;
+    }
+    &__mobile {
+      overflow: hidden;
+      text-overflow: ellipsis;
+      font: normal normal normal 16px/20px Heebo;
+      max-width: 150px;
+      white-space: nowrap;
+    }
+  }
+  .iconArrow {
+    font-size: 30px;
+    margin: auto 0px;
+  }
+  
+  .buttun__container {
+    max-width: 70%;
+  }
+  .button {
+    border-radius: 20px;
+    margin: 3px 0px;
+    background-color: inherit;
+    border: 1px solid;
+    height: 40px;
+    width: fit-content;
+    max-width: 180px;
+    font: normal normal normal 14px/21px Heebo;
+    &-mobile {
+      border-color: var(--buttun__borderColor-mobile);
+      opacity: 0.8;
+    }
+    &-desktop {
+      border-color: var(--buttun__borderColor-desktop);
+    }
+  }
+  .icon__file {
+    color: var(--icon__color);
+  }
+  mat-expansion-panel-header {
+    padding: 0px;
+  }
+  .expanded__desktop {
+    font: normal normal normal 14px/20px Heebo;
+  }
+  .card__open__mobile {
+    max-width: 80%;
+  }
+  

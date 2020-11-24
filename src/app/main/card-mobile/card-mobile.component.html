@@ -1,0 +1,95 @@
+<div  class="card card__mobile">
+    <div class="__header-mobile">
+      <div fxFlex fxLayout="row" fxLayoutAlign="space-between" class="__content">
+        <div fxLayout="row">
+          <div fxLayoutAlign="center center" class="__icon__rupper">
+            <mat-icon fxLayoutAlign="center center">alarm</mat-icon>
+          </div>
+          <div class="__name">{{ classGroup.name }}</div>
+        </div>
+        <div class="__date-mobile">
+          {{ classGroup.date | date: "shortDate" }}
+        </div>
+      </div>
+    </div>
+    <div *ngFor="let item of classGroup.NoteInsideClass; let i = index">
+      <div fxLayout="column">
+        <mat-expansion-panel
+          class="deactivateStyleMatriel"
+          (opened)="panelOpenStateMobile[i] = true"
+          (closed)="panelOpenStateMobile[i] = false"
+          hideToggle
+        >
+          <mat-expansion-panel-header class="card_inside-mobile">
+            <div fxLayout fxFlexAlign="start" class="img_rupper">
+              <img class="img __img __img__mobile" src="{{ item.img }}" />
+              <div
+                fxLayoutAlign="center center"
+                *ngIf="item.attachments.length"
+                class="__iconsmall __iconsmall__mobile"
+              >
+                <mat-icon fxLayoutAlign="center center">attach_file</mat-icon>
+              </div>
+            </div>
+  
+            <div fxFlex class="__content">
+              <div fxFlex="100" fxLayout="row" fxLayoutAlign="space-between">
+                <div fxFlex="90" fxLayout="column">
+                  <div class="__header__Note">
+                    הערות {{ item.text.length > 10 ? "המורה" : "התלמיד" }}
+                  </div>
+                  <div
+                    *ngIf="!panelOpenStateMobile[i]"
+                    class="previewText previewText__mobile"
+                  >
+                    {{ item.text }}
+                  </div>
+                  <div
+                    *ngIf="panelOpenStateMobile[i]"
+                    class="card__open__mobile"
+                    fxLayout="column"
+                  >
+                    <div class="text_open__mobile">
+                      {{ item.text }}
+                    </div>
+                    <div
+                      fxFlex="20"
+                      fxFlexOffset="7px"
+                      fxLayoutGap="2px"
+                      fxLayout="row wrap"
+                      fxLayoutAlign="start start"
+                      *ngIf="item.attachments.length > 0"
+                    >
+                      <div *ngFor="let file of item.attachments">
+                        <button
+                          (click)="$event.stopPropagation()"
+                          (click)="onFiles(file)"
+                          matRipple
+                          class="button button-mobile"
+                        >
+                          <div
+                            fxLayout="row"
+                            fxLayoutAlign="center center"
+                            class="button-content"
+                          >
+                            <mat-icon class="icon__file">insert_drive_file</mat-icon>
+                            <div fxLayout="row">
+                              <div>{{ file.name }}</div>
+                              <div>{{ file.suffix }}</div>
+                            </div>
+                          </div>
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <mat-icon class="iconArrow mat-icon-arrow"
+                  >keyboard_arrow_down</mat-icon
+                >
+              </div>
+            </div>
+          </mat-expansion-panel-header>
+        </mat-expansion-panel>
+      </div>
+    </div>
+  </div>

@@ -10,6 +10,8 @@ import { MainComponent } from './main/main.component';
 import { CardComponent } from './main/card/card.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MaterialModule } from './shared/material/material.module';
+import { CardMobileComponent } from './main/card-mobile/card-mobile.component';
+import { CardDesktopComponent } from './main/card-desktop/card-desktop.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +19,8 @@ import { MaterialModule } from './shared/material/material.module';
     HeaderComponent,
     MainComponent,
     CardComponent,
+    CardMobileComponent,
+    CardDesktopComponent,
 
   ],
   imports: [
